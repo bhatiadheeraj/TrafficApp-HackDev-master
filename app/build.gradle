@@ -19,7 +19,7 @@ android {
         exclude 'META-INF/LGPL2.1'
     }
     defaultConfig {
-        applicationId "dheeraj.com.trafficsolution"
+        applicationId "dheeraj.com.trafficpolice"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

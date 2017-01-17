@@ -41,6 +41,17 @@
                 android:layout_below="@+id/post_author_name"
                 android:layout_alignLeft="@+id/post_author_name"
                 android:layout_alignStart="@+id/post_author_name" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fsdfsdfsdfsdff"
+                android:id="@+id/author_id"
+                android:layout_toRightOf="@+id/post_timestamp"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ffdsd"
+                android:id="@+id/final_value"
+                android:layout_toRightOf="@+id/post_timestamp"
+                />
             <me.originqiu.library.EditTag
                 android:id="@+id/tag_view"
                 android:layout_width="match_parent"
@@ -102,6 +113,22 @@
                 android:layout_toEndOf="@+id/post_num_likes"
                 android:layout_marginLeft="19dp"
                 android:layout_marginStart="19dp" />
+            <ImageView android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/delete"
+                android:id="@+id/delete"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/appreciate"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"/>
+            <ImageView android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/appreciation"
+                android:id="@+id/appreciate"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/post_comment_icon"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"/>
             <TextView
                 android:id="@+id/post_num_likes"
                 android:layout_width="wrap_content"

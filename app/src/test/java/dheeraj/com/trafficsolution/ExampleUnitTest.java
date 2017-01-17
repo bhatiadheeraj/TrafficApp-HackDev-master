@@ -1,4 +1,4 @@
-package dheeraj.com.trafficsolution;
+package dheeraj.com.trafficpolice;
 
 import org.junit.Test;
 
