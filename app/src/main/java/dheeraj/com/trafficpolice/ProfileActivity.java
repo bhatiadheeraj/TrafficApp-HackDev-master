@@ -26,8 +26,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -68,6 +70,21 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         // GoogleApiClient with Sign In
 
 
+
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null && !currentUser.isAnonymous()) {
+
+        } else {
+            mAuth.signInWithEmailAndPassword("police@indore.com","police@indore.com").addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                @Override
+                public void onSuccess(AuthResult authResult) {
+                    Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                    startActivity(i);
+                    Log.e("success",""+authResult.toString());
+                }
+            });
+        }
 
         mProfileUi = (ViewGroup) findViewById(R.id.profile);
         points = (TextView)findViewById(R.id.points);

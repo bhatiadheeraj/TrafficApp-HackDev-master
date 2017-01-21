@@ -61,10 +61,10 @@ public class SplashActivity extends AppCompatActivity {
 
                 //User logged in or not
                 if (ab == false) {
-                    startActivity(new Intent(SplashActivity.this, SignIn.class));
+                    startActivity(new Intent(SplashActivity.this, FeedsActivity.class));
                     finish();
                 }else {
-                    startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(),FeedsActivity.class));
                     finish();
                 }
             }
